@@ -1,0 +1,6 @@
+Ontology files for the SWRL Rule-based reasoning lab:
+* EntityServiceAssociationModel.owl
+* LocationModel.owl
+* qu-rec20.owl 
+* qu.owl 
+Download the above OWL files into the same folder on your machine.
