@@ -16,8 +16,8 @@ Lectures:
 
 Labs:
 1. Rule-based reasoning
-   - Protége is used as ontology editor.
-   - Datasets:
+   - [Protége](https://protege.stanford.edu) is used as ontology editor.
+   - [Datasets](ontologies)
    - Lab worksheet
 2. KG concept linking in NER
    * Jupyter notebook
