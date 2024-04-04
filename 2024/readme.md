@@ -18,7 +18,7 @@ Labs:
 1. Rule-based reasoning
    - [Protége](https://protege.stanford.edu) is used as ontology editor.
    - [Datasets](ontologies)
-   - Lab worksheet
+   - [Lab worksheet](SWRL_Practical_Exercise.pdf)
 2. KG concept linking in NER
    * Jupyter notebook
    * Resources:
