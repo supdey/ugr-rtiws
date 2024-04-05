@@ -20,7 +20,7 @@ Labs:
    - [Datasets](ontologies)
    - [Lab worksheet](SWRL_Practical_Exercise.pdf)
 2. KG concept linking in NER
-   * Jupyter notebook
+   * [Jupyter notebook](https://colab.research.google.com/drive/1vc1kMDEywvecgnATTCUS-gpiernQTzoM?usp=share_link)
    * Resources:
        * [spaCy Visualizers](https://spacy.io/usage/visualizers#dep)
        * [ConceptNet5 API](https://github.com/commonsense/conceptnet5/wiki/API)
