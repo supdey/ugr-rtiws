@@ -20,6 +20,7 @@ Labs:
    - [Datasets](ontologies)
    - [Lab worksheet](SWRL_Practical_Exercise.pdf)
 2. KG concept linking in NER
+   * Make a **copy** of the Jupyter notebook below into your own Google Drive. Then, launch the Jupyter Notebook from Google Drive in a browser window as we will be using Google Colab for this exercise.
    * [Jupyter notebook](https://colab.research.google.com/drive/1vc1kMDEywvecgnATTCUS-gpiernQTzoM?usp=share_link)
    * Resources:
        * [spaCy Visualizers](https://spacy.io/usage/visualizers#dep)
