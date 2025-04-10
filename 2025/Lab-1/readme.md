@@ -19,5 +19,6 @@ Ontology files for this SWRL Rule-based reasoning lab:
 * LocationModel.owl
 * qu-rec20.owl 
 * qu.owl 
+
 Download the OWL files from [Ontology-files](ont-files) into the same folder on your machine, and follow the exercises given in the Lab worksheet pdf.
 
