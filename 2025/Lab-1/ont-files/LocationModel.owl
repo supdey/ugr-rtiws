@@ -1,0 +1,873 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#"
+     xml:base="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:sqwrl="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:LocationModel="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#">
+    <owl:Ontology rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#contains -->
+
+    <owl:ObjectProperty rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#contains">
+        <owl:inverseOf rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#isContainedIn"/>
+        <rdfs:domain rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Floor"/>
+        <rdfs:range rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#givesAccessTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#givesAccessTo"/>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#hasFacingArea -->
+
+    <owl:ObjectProperty rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#hasFacingArea">
+        <rdfs:domain rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <rdfs:range rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Compass_Area"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#hasFloor -->
+
+    <owl:ObjectProperty rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#hasFloor">
+        <owl:inverseOf rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#isInBuilding"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Building"/>
+        <rdfs:range rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Floor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#isAdjacentTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#isAdjacentTo">
+        <rdfs:domain rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#SpatialThing"/>
+        <rdfs:range rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#SpatialThing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#isContainedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#isContainedIn">
+        <rdfs:domain rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <rdfs:range rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Floor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#isInBuilding -->
+
+    <owl:ObjectProperty rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#isInBuilding">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Floor"/>
+        <rdfs:range rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Building"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#isLocatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#isLocatedIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Building"/>
+        <rdfs:range rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Premises"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Building -->
+
+    <owl:Class rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Building">
+        <rdfs:subClassOf rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#SpatialThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Compass_Area -->
+
+    <owl:Class rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Compass_Area">
+        <rdfs:subClassOf rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#SpatialThing"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#East"/>
+                    <rdf:Description rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#North"/>
+                    <rdf:Description rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#NorthEast"/>
+                    <rdf:Description rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#NorthWest"/>
+                    <rdf:Description rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#South"/>
+                    <rdf:Description rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#SouthEast"/>
+                    <rdf:Description rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#SouthWest"/>
+                    <rdf:Description rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#West"/>
+                </owl:oneOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Corridoor -->
+
+    <owl:Class rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Corridoor">
+        <rdfs:subClassOf rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Floor -->
+
+    <owl:Class rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Floor">
+        <rdfs:subClassOf rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#SpatialThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Lab -->
+
+    <owl:Class rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Lab">
+        <rdfs:subClassOf rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#MeetingRoom -->
+
+    <owl:Class rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#MeetingRoom">
+        <rdfs:subClassOf rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Premises -->
+
+    <owl:Class rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Premises">
+        <rdfs:subClassOf rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#SpatialThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room -->
+
+    <owl:Class rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room">
+        <rdfs:subClassOf rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#SpatialThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#SpatialThing -->
+
+    <owl:Class rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#SpatialThing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_Building -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_Building">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Building"/>
+        <hasFloor rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_FirstFloor"/>
+        <hasFloor rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_SecondFloor"/>
+        <isLocatedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#UniversityofSurreyCampus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_FirstFloor -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_FirstFloor">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Floor"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U32"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U33"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U34"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U35"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U36"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U37"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U38"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U39"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U4"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U40"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U41"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U42"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U43"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U44"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U45"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U46"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U48"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U49"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U5"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U50"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U53"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U54"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U6"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U7"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U8"/>
+        <isInBuilding rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_Building"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_SecondFloor -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_SecondFloor">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Floor"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E1"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E10"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E11"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E12"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E13"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E14"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E15"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E16"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E17"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E18"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E20"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E21"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E22"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E23"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E24"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E4"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E6"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E7"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E8"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E9"/>
+        <isInBuilding rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_Building"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BB_19_04 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BB_19_04">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#MeetingRoom"/>
+        <hasFacingArea rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#SouthEast"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BB_FourthFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BB_39_02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BB_39_02">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#MeetingRoom"/>
+        <hasFacingArea rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#SouthEast"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BB_SecondFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BB_Building -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BB_Building">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Building"/>
+        <isLocatedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#UniversityofSurreyCampus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BB_FourthFloor -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BB_FourthFloor">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Floor"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BB_19_04"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BB_SecondFloor -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BB_SecondFloor">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Floor"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BB_39_02"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BC_19_02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BC_19_02">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <hasFacingArea rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#East"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BC_SecondFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BC_Building -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BC_Building">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Building"/>
+        <hasFloor rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BC_SecondFloor"/>
+        <isLocatedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#UniversityofSurreyCampus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BC_SecondFloor -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BC_SecondFloor">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Floor"/>
+        <contains rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BC_19_02"/>
+        <isInBuilding rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BC_Building"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Corridoor1_BA_02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Corridoor1_BA_02">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Corridoor"/>
+        <givesAccessTo rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E10"/>
+        <givesAccessTo rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E11"/>
+        <givesAccessTo rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E12"/>
+        <givesAccessTo rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E6"/>
+        <givesAccessTo rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E7"/>
+        <givesAccessTo rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E8"/>
+        <givesAccessTo rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E9"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E1">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#MeetingRoom"/>
+        <hasFacingArea rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#East"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_SecondFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E10">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <hasFacingArea rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#East"/>
+        <isAdjacentTo rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E11"/>
+        <isAdjacentTo rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E9"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_SecondFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E11">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <hasFacingArea rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#NorthWest"/>
+        <isAdjacentTo rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E10"/>
+        <isAdjacentTo rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E12"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_SecondFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E12">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <hasFacingArea rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#South"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_SecondFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E13">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <hasFacingArea rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#South"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_SecondFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E14">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <hasFacingArea rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#South"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_SecondFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E15">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <hasFacingArea rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#South"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_SecondFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E16">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <hasFacingArea rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#South"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_SecondFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E17">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <hasFacingArea rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#South"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_SecondFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E18 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E18">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_SecondFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E20">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_SecondFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E21 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E21">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_SecondFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E22 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E22">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_SecondFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E23 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E23">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_SecondFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E24 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E24">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#MeetingRoom"/>
+        <hasFacingArea rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#West"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_SecondFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E4">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_SecondFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E6">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#MeetingRoom"/>
+        <hasFacingArea rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#West"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_SecondFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E7">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_SecondFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E8">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_SecondFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#E9">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_SecondFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#East -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#East">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Compass_Area"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#North -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#North">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Compass_Area"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#NorthEast -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#NorthEast">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Compass_Area"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#NorthWest -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#NorthWest">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Compass_Area"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#South -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#South">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Compass_Area"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#SouthEast -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#SouthEast">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Compass_Area"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#SouthWest -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#SouthWest">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Compass_Area"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U32 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U32">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_FirstFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U33 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U33">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_FirstFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U34 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U34">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_FirstFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U35 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U35">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_FirstFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U36 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U36">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_FirstFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U37 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U37">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_FirstFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U38 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U38">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <hasFacingArea rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#NorthEast"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_FirstFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U39 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U39">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_FirstFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U4">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_FirstFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U40 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U40">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_FirstFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U41 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U41">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_FirstFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U42 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U42">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_FirstFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U43 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U43">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_FirstFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U44 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U44">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_FirstFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U45 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U45">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_FirstFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U46 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U46">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_FirstFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U48 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U48">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_FirstFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U49 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U49">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_FirstFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U5">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_FirstFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U50 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U50">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_FirstFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U53 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U53">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Lab"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_FirstFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U54 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U54">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Lab"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_FirstFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U6">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_FirstFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U7">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_FirstFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#U8">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Room"/>
+        <isContainedIn rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#BA_FirstFloor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#UniversityofSurreyCampus -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#UniversityofSurreyCampus">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Premises"/>
+        <rdfs:seeAlso>http://dbpedia.org/page/University_of_Surrey</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#West -->
+
+    <owl:NamedIndividual rdf:about="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#West">
+        <rdf:type rdf:resource="http://www.surrey.ac.uk/ccsr/ontologies/LocationModel.owl#Compass_Area"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
