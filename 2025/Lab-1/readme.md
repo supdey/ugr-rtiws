@@ -11,5 +11,6 @@ Lectures:
 Lab-1 Ontology Application - Smart Campus use case
 1. Rule-based reasoning
    - [Protége](https://protege.stanford.edu) is used as ontology editor.
-   - [Datasets](ont-files)
+   - [Lab worksheet](SWRL_Practical_Exercise_Day1Lab.pdf)
+   - [Ontology-files](ont-files)
    
