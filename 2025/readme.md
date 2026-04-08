@@ -1,8 +1,6 @@
 MSc: Software Development (RTIWS) at University of Granada, Spain.
 Visiting lecturer: Dr. Suparna De, University of Surrey, UK
 
-Academic year: 2024-25
-
 Lectures:
 - Ontology applications
 - Data analytics
